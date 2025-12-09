@@ -3,48 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Frengky Setiawan | Full Stack Developer Portfolio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav id="navbar">
+    <!-- Cursor Glow Effect -->
+    <div class="cursor-glow"></div>
+    
+    <!-- Animated Background Blobs -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+    <div class="blob blob-4"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo">Portfolio</a>
+            <a href="#" class="logo">
+                <i class="fas fa-code"></i>
+                Frengky.dev
+            </a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#contact" class="btn-nav">Contact</a></li>
             </ul>
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
 
-    <section id="home" class="section hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Hi, I'm <span class="highlight">Frengky Setiawan</span></h1>
-            <p class="hero-subtitle">Full Stack Developer | Designer | Creator</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-    </section>
-
-    <section id="about" class="section">
+    <!-- Hero Section -->
+    <section id="home" class="hero">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <p>I'm a passionate developer with expertise in creating modern, responsive web applications. I love turning ideas into reality through clean code and thoughtful design.</p>
-                <p>With a strong foundation in both frontend and backend technologies, I build full-stack solutions that make a difference.</p>
+            <div class="hero-content">
+                <div class="label">
+                    <i class="fas fa-star"></i>
+                    FULL STACK DEVELOPER
+                </div>
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Frengky Setiawan</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Building modern, responsive web applications with clean code and thoughtful design.
+                    Turning ideas into reality through innovation and expertise.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        View My Work
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <i class="fas fa-envelope"></i>
+                        Get In Touch
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
+            <div class="section-label">ABOUT ME</div>
+            <h2 class="section-title">
+                Developer <span class="highlight-text">without the chaos.</span>
+            </h2>
+            <div class="about-content">
+                <p class="large-text">
+                    I'm a passionate developer with expertise in creating modern, responsive web applications.
+                    I love turning ideas into reality through clean code and thoughtful design.
+                </p>
+                <p>
+                    With a strong foundation in both frontend and backend technologies, I build full-stack 
+                    solutions that make a difference. My approach combines technical excellence with creative 
+                    problem-solving to deliver exceptional results.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-label">MY WORK</div>
+            <h2 class="section-title">
+                Featured <span class="highlight-text">Projects</span>
+            </h2>
             <div class="projects-grid">
-                <div class="project-card" onclick="window.open('../../../Semester 2/HTML/home.html', '_blank')" style="cursor: pointer;">
+                <div class="project-card">
+                    <div class="project-number">01</div>
                     <h3>DiamondCut Motors</h3>
-                    <p>A luxury car dealership website featuring an interactive carousel gallery and showroom</p>
+                    <p>A luxury car dealership website featuring an interactive carousel gallery and showroom with modern design patterns.</p>
                     <div class="project-tags">
                         <span class="tag">HTML</span>
                         <span class="tag">CSS</span>
@@ -52,41 +109,58 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>Project Two</h3>
-                    <p>E-commerce platform with real-time inventory management</p>
+                    <div class="project-number">02</div>
+                    <h3>Full Stack Applications</h3>
+                    <p>Building scalable web applications with modern frameworks and best practices for optimal performance.</p>
                     <div class="project-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Stripe</span>
+                        <span class="tag">React</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">MongoDB</span>
                     </div>
                 </div>
                 <div class="project-card">
-                    <h3>Project Three</h3>
-                    <p>Mobile-first social media dashboard</p>
+                    <div class="project-number">03</div>
+                    <h3>Responsive Design Systems</h3>
+                    <p>Creating beautiful, mobile-first designs that work seamlessly across all devices and screen sizes.</p>
                     <div class="project-tags">
-                        <span class="tag">Vue.js</span>
-                        <span class="tag">Firebase</span>
-                        <span class="tag">Tailwind</span>
+                        <span class="tag">UI/UX</span>
+                        <span class="tag">Responsive</span>
+                        <span class="tag">Design</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="section">
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills</h2>
+            <div class="section-label">EXPERTISE</div>
+            <h2 class="section-title">
+                Full Spectrum <span class="highlight-text">Tech Stack</span>
+            </h2>
+            <p class="section-description">
+                Offering a suite of advanced skills designed to elevate your 
+                development capabilities with precision and expertise.
+            </p>
             <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Frontend</h3>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <h3>Frontend Development</h3>
                     <ul>
                         <li>HTML/CSS/JavaScript</li>
                         <li>React & Next.js</li>
                         <li>Responsive Design</li>
+                        <li>Modern UI Frameworks</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Backend</h3>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Backend Development</h3>
                     <ul>
                         <li>Node.js & Express</li>
                         <li>Python & Django</li>
@@ -94,8 +168,11 @@
                         <li>Database Design</li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3>Tools</h3>
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Developer Tools</h3>
                     <ul>
                         <li>Git & GitHub</li>
                         <li>Docker</li>
@@ -107,22 +184,54 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <p>I'm always open to new opportunities and collaborations.</p>
-                <div class="contact-links">
-                    <a href="mailto:frengky.setiawan@gmail.com" class="contact-button">Email Me</a>
-                    <a href="https:github.com/FrengkyS1" target="_blank" class="contact-button">GitHub</a>
-                    <a href="https:linkedin.com/in/frengky-setiawan" target="_blank" class="contact-button">LinkedIn</a>
-                </div>
+            <div class="section-label">GET IN TOUCH</div>
+            <h2 class="section-title">
+                Let's Build <span class="highlight-text">Something Amazing</span>
+            </h2>
+            <p class="contact-description">
+                I'm always open to new opportunities and collaborations.
+                Whether you have a project in mind or just want to chat, feel free to reach out.
+            </p>
+            <div class="contact-buttons">
+                <a href="mailto:frengky.setiawan78@gmail.com" class="btn-contact">
+                    <i class="fas fa-envelope"></i>
+                    Email Me
+                </a>
+                <a href="https://github.com/FrengkyS1" target="_blank" class="btn-contact">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://linkedin.com/in/frengky-setiawan" target="_blank" class="btn-contact">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
             </div>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2025 Your Name. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h4>
+                        <i class="fas fa-code"></i>
+                        Frengky Setiawan
+                    </h4>
+                    <p>Full Stack Developer | Designer | Creator</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Frengky Setiawan. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
     <script src="script.js"></script>

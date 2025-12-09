@@ -1,9 +1,0 @@
-{
-  "name": "portfolio",
-  "version": "1.0.0",
-  "description": "Personal Portfolio Website",
-  "scripts": {
-    "dev": "python -m http.server 8000",
-    "start": "python -m http.server 8000"
-  }
-}
