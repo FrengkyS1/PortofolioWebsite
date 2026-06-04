@@ -3,235 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frengky Setiawan | Full Stack Developer Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Frengky Setiawan — builds small desktop apps</title>
+    <meta name="description" content="Frengky Setiawan, a computer-science student in Indonesia who builds native desktop apps and media tools like LuminaPlayer and LuminaDL.">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <!-- Cursor Glow Effect -->
-    <div class="cursor-glow"></div>
-    
-    <!-- Animated Background Blobs -->
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="blob blob-3"></div>
-    <div class="blob blob-4"></div>
+<body id="top">
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <i class="fas fa-code"></i>
-                Frengky.dev
-            </a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#contact" class="btn-nav">Contact</a></li>
-            </ul>
-            <button class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+    <header class="masthead">
+        <a class="wordmark" href="#top">Frengky&nbsp;Setiawan</a>
+        <nav class="nav">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <span class="clock" id="clock" aria-label="Local time in Jakarta"></span>
+    </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="label">
-                    <i class="fas fa-star"></i>
-                    FULL STACK DEVELOPER
-                </div>
-                <h1 class="hero-title">
-                    Hi, I'm <span class="highlight">Frengky Setiawan</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Building modern, responsive web applications with clean code and thoughtful design.
-                    Turning ideas into reality through innovation and expertise.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">
-                        <i class="fas fa-rocket"></i>
-                        View My Work
-                    </a>
-                    <a href="#contact" class="btn-secondary">
-                        <i class="fas fa-envelope"></i>
-                        Get In Touch
-                    </a>
-                </div>
+    <main>
+        <!-- Intro -->
+        <section class="intro">
+            <p class="eyebrow">Computer-science student · Indonesia</p>
+            <h1 class="lede">
+                I&rsquo;m Frengky. I build small <em>native</em> desktop apps&mdash;
+                mostly the media tools I <em>wished</em> already existed,
+                then keep using them myself.
+            </h1>
+            <p class="standfirst">
+                Most of what I know I picked up by breaking things and reading
+                other people&rsquo;s source code. I care about apps that start fast,
+                stay out of the way, and don&rsquo;t ship a browser inside them.
+            </p>
+            <p class="currently">
+                <span class="currently-key">Currently</span>
+                learning Rust properly and rewriting my old C++ player one module
+                at a time.
+            </p>
+        </section>
+
+        <!-- Work -->
+        <section id="work" class="section work">
+            <div class="section-head">
+                <span class="num">01</span>
+                <h2>Selected work</h2>
             </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-label">ABOUT ME</div>
-            <h2 class="section-title">
-                Developer <span class="highlight-text">without the chaos.</span>
-            </h2>
-            <div class="about-content">
-                <p class="large-text">
-                    I'm a passionate developer with expertise in creating modern, responsive web applications.
-                    I love turning ideas into reality through clean code and thoughtful design.
+            <ol class="projects">
+                <li class="project">
+                    <div class="project-meta">
+                        <span class="project-index">01</span>
+                        <span class="project-year">2025</span>
+                        <span class="project-kind">Desktop · native</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">LuminaPlayer</h3>
+                        <p class="project-text">
+                            A video player I wrote in C++ on top of <span class="ital">libmpv</span>,
+                            because I wanted something light that just plays my files without
+                            the bloat. It has its own library view, a thin rendering layer over
+                            the mpv engine, and keeps its settings in plain JSON&mdash;
+                            no Electron, no web view, no telemetry.
+                        </p>
+                        <ul class="stack">
+                            <li>C++20</li>
+                            <li>libmpv</li>
+                            <li>CMake</li>
+                            <li>Win32</li>
+                        </ul>
+                        <p class="project-links">
+                            <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">Source &rarr;</a>
+                        </p>
+                    </div>
+                </li>
+
+                <li class="project">
+                    <div class="project-meta">
+                        <span class="project-index">02</span>
+                        <span class="project-year">2025</span>
+                        <span class="project-kind">Desktop · Tauri</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">LuminaDL</h3>
+                        <p class="project-text">
+                            A desktop video downloader built with Tauri. A small Rust core does
+                            the actual work while a React front-end stays deliberately quiet.
+                            It lives in the system tray, so it&rsquo;s there when I need it and
+                            invisible when I don&rsquo;t. This one taught me most of the Rust I know.
+                        </p>
+                        <ul class="stack">
+                            <li>Tauri 2</li>
+                            <li>Rust</li>
+                            <li>React 19</li>
+                            <li>TypeScript</li>
+                            <li>Tailwind</li>
+                        </ul>
+                        <p class="project-links">
+                            <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">Source &rarr;</a>
+                        </p>
+                    </div>
+                </li>
+            </ol>
+
+            <p class="aside">
+                A few other things&mdash;a manga downloader, a supply-chain sim game for
+                a course&mdash;live on my <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">GitHub</a>.
+                These two are the ones I still open every week.
+            </p>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="section about">
+            <div class="section-head">
+                <span class="num">02</span>
+                <h2>About</h2>
+            </div>
+            <div class="prose">
+                <p>
+                    I&rsquo;m a computer-science student based in Indonesia. I tend to build
+                    for myself first&mdash;if a tool annoys me, I&rsquo;d rather spend a weekend
+                    rewriting it than keep complaining about it.
                 </p>
                 <p>
-                    With a strong foundation in both frontend and backend technologies, I build full-stack 
-                    solutions that make a difference. My approach combines technical excellence with creative 
-                    problem-solving to deliver exceptional results.
+                    Lately that means a lot of native desktop work: C++ when I want to be close
+                    to the metal, Rust and Tauri when I want it to ship without a 200&nbsp;MB runtime.
+                    I&rsquo;m comfortable on the web too&mdash;React, TypeScript, a bit of Python on
+                    the backend&mdash;but the things I&rsquo;m proudest of run on the desktop.
+                </p>
+                <p>
+                    I&rsquo;m not done learning any of it. If you&rsquo;ve read this far, you probably
+                    get the appeal of building the unglamorous thing properly.
                 </p>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-label">MY WORK</div>
-            <h2 class="section-title">
-                Featured <span class="highlight-text">Projects</span>
-            </h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-number">01</div>
-                    <h3>DiamondCut Motors</h3>
-                    <p>A luxury car dealership website featuring an interactive carousel gallery and showroom with modern design patterns.</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-number">02</div>
-                    <h3>Full Stack Applications</h3>
-                    <p>Building scalable web applications with modern frameworks and best practices for optimal performance.</p>
-                    <div class="project-tags">
-                        <span class="tag">React</span>
-                        <span class="tag">Node.js</span>
-                        <span class="tag">MongoDB</span>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-number">03</div>
-                    <h3>Responsive Design Systems</h3>
-                    <p>Creating beautiful, mobile-first designs that work seamlessly across all devices and screen sizes.</p>
-                    <div class="project-tags">
-                        <span class="tag">UI/UX</span>
-                        <span class="tag">Responsive</span>
-                        <span class="tag">Design</span>
-                    </div>
-                </div>
+        <!-- Contact -->
+        <section id="contact" class="section contact">
+            <div class="section-head">
+                <span class="num">03</span>
+                <h2>Get in touch</h2>
             </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-label">EXPERTISE</div>
-            <h2 class="section-title">
-                Full Spectrum <span class="highlight-text">Tech Stack</span>
-            </h2>
-            <p class="section-description">
-                Offering a suite of advanced skills designed to elevate your 
-                development capabilities with precision and expertise.
+            <p class="contact-lede">
+                Open to internships, freelance, or just trading notes about
+                native apps and media tooling.
             </p>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <h3>Frontend Development</h3>
-                    <ul>
-                        <li>HTML/CSS/JavaScript</li>
-                        <li>React & Next.js</li>
-                        <li>Responsive Design</li>
-                        <li>Modern UI Frameworks</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-server"></i>
-                    </div>
-                    <h3>Backend Development</h3>
-                    <ul>
-                        <li>Node.js & Express</li>
-                        <li>Python & Django</li>
-                        <li>REST APIs</li>
-                        <li>Database Design</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3>Developer Tools</h3>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>Docker</li>
-                        <li>CI/CD</li>
-                        <li>Vercel/Netlify</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+            <ul class="contact-list">
+                <li>
+                    <span class="contact-label">Email</span>
+                    <a href="mailto:frengky.setiawan78@gmail.com">frengky.setiawan78@gmail.com</a>
+                </li>
+                <li>
+                    <span class="contact-label">GitHub</span>
+                    <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">github.com/FrengkyS1</a>
+                </li>
+                <li>
+                    <span class="contact-label">LinkedIn</span>
+                    <a href="https://linkedin.com/in/frengky-setiawan" target="_blank" rel="noopener">in/frengky-setiawan</a>
+                </li>
+            </ul>
+        </section>
+    </main>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-label">GET IN TOUCH</div>
-            <h2 class="section-title">
-                Let's Build <span class="highlight-text">Something Amazing</span>
-            </h2>
-            <p class="contact-description">
-                I'm always open to new opportunities and collaborations.
-                Whether you have a project in mind or just want to chat, feel free to reach out.
-            </p>
-            <div class="contact-buttons">
-                <a href="mailto:frengky.setiawan78@gmail.com" class="btn-contact">
-                    <i class="fas fa-envelope"></i>
-                    Email Me
-                </a>
-                <a href="https://github.com/FrengkyS1" target="_blank" class="btn-contact">
-                    <i class="fab fa-github"></i>
-                    GitHub
-                </a>
-                <a href="https://linkedin.com/in/frengky-setiawan" target="_blank" class="btn-contact">
-                    <i class="fab fa-linkedin"></i>
-                    LinkedIn
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <h4>
-                        <i class="fas fa-code"></i>
-                        Frengky Setiawan
-                    </h4>
-                    <p>Full Stack Developer | Designer | Creator</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Frengky Setiawan. All rights reserved.</p>
-            </div>
-        </div>
+        <p>Hand-written in HTML, CSS &amp; a little JavaScript.</p>
+        <p class="footer-meta">&copy; 2026 Frengky Setiawan · Jakarta</p>
     </footer>
 
     <script src="script.js"></script>
