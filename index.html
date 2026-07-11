@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frengky Setiawan — builds small desktop apps</title>
+    <title>Frengky Setiawan builds small desktop apps</title>
     <meta name="description" content="Frengky Setiawan, a computer-science student in Indonesia who builds native desktop apps and media tools like LuminaPlayer and LuminaDL.">
+    <meta name="theme-color" content="#15161f">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.5..125,100..900&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
+
+    <div class="seekbar" id="seekbar" aria-hidden="true"></div>
 
     <header class="masthead">
         <a class="wordmark" href="#top">Frengky&nbsp;Setiawan</a>
@@ -26,17 +29,18 @@
     <main>
         <!-- Intro -->
         <section class="intro">
-            <p class="eyebrow">Computer-science student · Indonesia</p>
             <h1 class="lede">
-                I&rsquo;m Frengky. I build small <em>native</em> desktop apps&mdash;
-                mostly the media tools I <em>wished</em> already existed,
-                then keep using them myself.
+                I&rsquo;m Frengky. I build small <em>native</em> desktop apps:
+                the media tools I wished already existed, then keep using
+                them myself.
             </h1>
             <p class="standfirst">
-                Most of what I know I picked up by breaking things and reading
-                other people&rsquo;s source code. I care about apps that start fast,
-                stay out of the way, and don&rsquo;t ship a browser inside them.
+                I&rsquo;m a computer-science student in Indonesia. Most of what I know
+                I picked up by breaking things and reading other people&rsquo;s source
+                code. I care about apps that start fast, stay out of the way, and
+                don&rsquo;t ship a browser inside them.
             </p>
+            <div class="wave" id="wave" aria-hidden="true"></div>
             <p class="currently">
                 <span class="currently-key">Currently</span>
                 learning Rust properly and rewriting my old C++ player one module
@@ -46,26 +50,22 @@
 
         <!-- Work -->
         <section id="work" class="section work">
-            <div class="section-head">
-                <span class="num">01</span>
-                <h2>Selected work</h2>
-            </div>
+            <h2>Selected work</h2>
 
             <ol class="projects">
                 <li class="project">
                     <div class="project-meta">
-                        <span class="project-index">01</span>
                         <span class="project-year">2025</span>
-                        <span class="project-kind">Desktop · native</span>
+                        <span class="project-kind">Desktop &middot; native</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">LuminaPlayer</h3>
                         <p class="project-text">
-                            A video player I wrote in C++ on top of <span class="ital">libmpv</span>,
-                            because I wanted something light that just plays my files without
-                            the bloat. It has its own library view, a thin rendering layer over
-                            the mpv engine, and keeps its settings in plain JSON&mdash;
-                            no Electron, no web view, no telemetry.
+                            A video player I wrote in C++ on top of libmpv, because I
+                            wanted something light that just plays my files without the
+                            bloat. It has its own library view, a thin rendering layer
+                            over the mpv engine, and keeps its settings in plain JSON.
+                            No Electron, no web view, no telemetry.
                         </p>
                         <ul class="stack">
                             <li>C++20</li>
@@ -81,9 +81,8 @@
 
                 <li class="project">
                     <div class="project-meta">
-                        <span class="project-index">02</span>
                         <span class="project-year">2025</span>
-                        <span class="project-kind">Desktop · Tauri</span>
+                        <span class="project-kind">Desktop &middot; Tauri</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">LuminaDL</h3>
@@ -108,18 +107,18 @@
 
                 <li class="project">
                     <div class="project-meta">
-                        <span class="project-index">03</span>
                         <span class="project-year">2025</span>
                         <span class="project-kind">Browser extension</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">Video Extension</h3>
                         <p class="project-text">
-                            A browser extension I wrote because the built-in volume cap wasn&rsquo;t
-                            enough for quiet embeds&mdash;especially iframes like ok.ru. It boosts
-                            per-tab audio beyond 100&nbsp;%, remembers the level across page loads, and
-                            adds keyboard shortcuts (Z&hairsp;/&hairsp;X) to rewind or skip forward
-                            10 seconds without touching the mouse. Small popup, two tabs, nothing more.
+                            A browser extension I wrote because the built-in volume cap
+                            wasn&rsquo;t enough for quiet embeds, especially iframes like
+                            ok.ru. It boosts per-tab audio beyond 100&nbsp;%, remembers the
+                            level across page loads, and adds keyboard shortcuts
+                            (Z&hairsp;/&hairsp;X) to rewind or skip forward 10 seconds
+                            without touching the mouse. Small popup, two tabs, nothing more.
                         </p>
                         <ul class="stack">
                             <li>JavaScript</li>
@@ -134,19 +133,19 @@
 
                 <li class="project">
                     <div class="project-meta">
-                        <span class="project-index">04</span>
                         <span class="project-year">2026</span>
-                        <span class="project-kind">Desktop · Tauri</span>
+                        <span class="project-kind">Desktop &middot; Tauri</span>
                     </div>
                     <div class="project-body">
                         <h3 class="project-title">Hearth</h3>
                         <p class="project-text">
-                            A control panel for setting up a Windows desktop the way I like it&mdash;
-                            installing the tools (a tiling window manager, status bar, patched fonts),
-                            writing their config files, and toggling services and startup items&mdash;all
-                            from one window instead of a dozen manual steps. A Rust backend does the
-                            privileged work while the front-end stays plain JavaScript, no framework.
-                            I built it because I was tired of redoing the same ritual on every fresh install.
+                            A control panel for setting up a Windows desktop the way I like it:
+                            installing the tools (a tiling window manager, status bar, patched
+                            fonts), writing their config files, and toggling services and
+                            startup items, all from one window instead of a dozen manual steps.
+                            A Rust backend does the privileged work while the front-end stays
+                            plain JavaScript, no framework. I built it because I was tired of
+                            redoing the same ritual on every fresh install.
                         </p>
                         <ul class="stack">
                             <li>Tauri 2</li>
@@ -162,43 +161,39 @@
             </ol>
 
             <p class="aside">
-                A few other things&mdash;a manga downloader, a supply-chain sim game for
-                a course&mdash;live on my <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">GitHub</a>.
+                A few other things, like a manga downloader and a supply-chain sim
+                game for a course, live on my
+                <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">GitHub</a>.
                 These four are the ones I still open every week.
             </p>
         </section>
 
         <!-- About -->
         <section id="about" class="section about">
-            <div class="section-head">
-                <span class="num">02</span>
-                <h2>About</h2>
-            </div>
+            <h2>About</h2>
             <div class="prose">
                 <p>
-                    I&rsquo;m a computer-science student based in Indonesia. I tend to build
-                    for myself first&mdash;if a tool annoys me, I&rsquo;d rather spend a weekend
-                    rewriting it than keep complaining about it.
+                    I&rsquo;m a computer-science student based in Indonesia. I tend to
+                    build for myself first: if a tool annoys me, I&rsquo;d rather spend
+                    a weekend rewriting it than keep complaining about it.
                 </p>
                 <p>
-                    Lately that means a lot of native desktop work: C++ when I want to be close
-                    to the metal, Rust and Tauri when I want it to ship without a 200&nbsp;MB runtime.
-                    I&rsquo;m comfortable on the web too&mdash;React, TypeScript, a bit of Python on
-                    the backend&mdash;but the things I&rsquo;m proudest of run on the desktop.
+                    Lately that means a lot of native desktop work. C++ when I want to
+                    be close to the metal, Rust and Tauri when I want it to ship without
+                    a 200&nbsp;MB runtime. I&rsquo;m comfortable on the web too (React,
+                    TypeScript, a bit of Python on the backend), but the things
+                    I&rsquo;m proudest of run on the desktop.
                 </p>
                 <p>
-                    I&rsquo;m not done learning any of it. If you&rsquo;ve read this far, you probably
-                    get the appeal of building the unglamorous thing properly.
+                    I&rsquo;m not done learning any of it. If you&rsquo;ve read this far,
+                    you probably get the appeal of building the unglamorous thing properly.
                 </p>
             </div>
         </section>
 
         <!-- Contact -->
         <section id="contact" class="section contact">
-            <div class="section-head">
-                <span class="num">03</span>
-                <h2>Get in touch</h2>
-            </div>
+            <h2>Get in touch</h2>
             <p class="contact-lede">
                 Open to internships, freelance, or just trading notes about
                 native apps and media tooling.
@@ -222,7 +217,7 @@
 
     <footer class="footer">
         <p>Hand-written in HTML, CSS &amp; a little JavaScript.</p>
-        <p class="footer-meta">&copy; 2026 Frengky Setiawan · Jakarta</p>
+        <p class="footer-meta">&copy; 2026 Frengky Setiawan &middot; Jakarta</p>
     </footer>
 
     <script src="script.js"></script>

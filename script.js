@@ -1,4 +1,4 @@
-// Live local time — a small honest detail. Shown in Jakarta time (WIB).
+// Live local time, shown as a player-style timecode in Jakarta time (WIB).
 const clock = document.getElementById('clock');
 
 function tickClock() {
@@ -13,9 +13,65 @@ function tickClock() {
 tickClock();
 setInterval(tickClock, 30_000);
 
-// Reveal sections on scroll — subtle, and only once.
+// Scroll progress as a 2px amber seek line across the top of the viewport.
+const seekbar = document.getElementById('seekbar');
+
+if (seekbar) {
+    let ticking = false;
+    const updateSeek = () => {
+        const max = document.documentElement.scrollHeight - window.innerHeight;
+        seekbar.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+        ticking = false;
+    };
+    window.addEventListener(
+        'scroll',
+        () => {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(updateSeek);
+            }
+        },
+        { passive: true }
+    );
+    updateSeek();
+}
+
+// Decorative waveform in the intro: amber bars with a slow sweeping
+// playhead. Deterministic heights so it looks the same on every load.
+const wave = document.getElementById('wave');
+
+if (wave) {
+    const W = 520;
+    const H = 52;
+    const BARS = 52;
+    const step = W / BARS;
+    let bars = '';
+    for (let i = 0; i < BARS; i++) {
+        // layered sines give a plausible audio envelope without randomness
+        const t = i / BARS;
+        const env =
+            0.35 +
+            0.65 *
+                Math.abs(
+                    Math.sin(t * Math.PI * 2.3) * 0.6 +
+                    Math.sin(t * Math.PI * 7.1) * 0.3 +
+                    Math.sin(t * Math.PI * 13.7) * 0.1
+                );
+        const h = Math.max(3, Math.round(env * H * 0.9));
+        const y = Math.round((H - h) / 2);
+        const opacity = (0.25 + env * 0.6).toFixed(2);
+        bars += `<rect x="${(i * step).toFixed(1)}" y="${y}" width="3" height="${h}" rx="1.5" fill="var(--amber)" opacity="${opacity}"/>`;
+    }
+    wave.innerHTML =
+        `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" focusable="false">` +
+        bars +
+        `<rect class="playhead" x="0" y="0" width="1.5" height="${H}" fill="var(--text)" opacity="0.8"/>` +
+        `</svg>`;
+}
+
+// Reveal sections on scroll: subtle, and only once.
 const revealTargets = document.querySelectorAll(
-    '.intro, .section-head, .project, .aside, .prose, .contact-lede, .contact-list'
+    '.intro, .section h2, .project, .aside, .prose, .contact-lede, .contact-list'
 );
 
 if ('IntersectionObserver' in window) {
