@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="18" fill="#15161f"/>
-  <text x="50" y="66" font-family="Archivo, Arial, sans-serif" font-size="56" font-weight="700" fill="#f3f3f6" text-anchor="middle">F</text>
-  <rect x="18" y="78" width="64" height="4" rx="2" fill="#2c2e3d"/>
-  <rect x="18" y="78" width="40" height="4" rx="2" fill="#f0ac3a"/>
+  <rect width="100" height="100" rx="18" fill="#2b41b8"/>
+  <text x="50" y="64" font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#f3f4f9" text-anchor="middle">F</text>
+  <g fill="#9fe0e8">
+    <rect x="18" y="76" width="10" height="7"/>
+    <rect x="31" y="76" width="10" height="7"/>
+    <rect x="44" y="76" width="10" height="7"/>
+  </g>
+  <g fill="#22318a">
+    <rect x="57" y="76" width="10" height="7"/>
+    <rect x="70" y="76" width="10" height="7"/>
+  </g>
 </svg>

@@ -5,220 +5,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frengky Setiawan builds small desktop apps</title>
     <meta name="description" content="Frengky Setiawan, a computer-science student in Indonesia who builds native desktop apps and media tools like LuminaPlayer and LuminaDL.">
-    <meta name="theme-color" content="#15161f">
+    <meta name="theme-color" content="#2b41b8">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62.5..125,100..900&family=JetBrains+Mono:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500&family=Barlow+Semi+Condensed:wght@500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
 
-    <div class="seekbar" id="seekbar" aria-hidden="true"></div>
+    <div class="progress" aria-hidden="true"><div class="progress-fill" id="progress"></div></div>
 
-    <header class="masthead">
-        <a class="wordmark" href="#top">Frengky&nbsp;Setiawan</a>
-        <nav class="nav">
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <span class="clock" id="clock" aria-label="Local time in Jakarta"></span>
-    </header>
+    <div class="shell">
+        <header class="rail">
+            <a class="wordmark" href="#top">Frengky<br>Setiawan</a>
+            <nav class="nav">
+                <a href="#work">Work</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <span class="clock" id="clock" aria-label="Local time in Jakarta"></span>
+        </header>
 
-    <main>
-        <!-- Intro -->
-        <section class="intro">
-            <h1 class="lede">
-                I&rsquo;m Frengky. I build small <em>native</em> desktop apps:
-                the media tools I wished already existed, then keep using
-                them myself.
-            </h1>
-            <p class="standfirst">
-                I&rsquo;m a computer-science student in Indonesia. Most of what I know
-                I picked up by breaking things and reading other people&rsquo;s source
-                code. I care about apps that start fast, stay out of the way, and
-                don&rsquo;t ship a browser inside them.
-            </p>
-            <div class="wave" id="wave" aria-hidden="true"></div>
-            <p class="currently">
-                <span class="currently-key">Currently</span>
-                learning Rust properly and rewriting my old C++ player one module
-                at a time.
-            </p>
-        </section>
-
-        <!-- Work -->
-        <section id="work" class="section work">
-            <h2>Selected work</h2>
-
-            <ol class="projects">
-                <li class="project">
-                    <div class="project-meta">
-                        <span class="project-year">2025</span>
-                        <span class="project-kind">Desktop &middot; native</span>
-                    </div>
-                    <div class="project-body">
-                        <h3 class="project-title">LuminaPlayer</h3>
-                        <p class="project-text">
-                            A video player I wrote in C++ on top of libmpv, because I
-                            wanted something light that just plays my files without the
-                            bloat. It has its own library view, a thin rendering layer
-                            over the mpv engine, and keeps its settings in plain JSON.
-                            No Electron, no web view, no telemetry.
-                        </p>
-                        <ul class="stack">
-                            <li>C++20</li>
-                            <li>libmpv</li>
-                            <li>CMake</li>
-                            <li>Win32</li>
-                        </ul>
-                        <p class="project-links">
-                            <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">Source &rarr;</a>
-                        </p>
-                    </div>
-                </li>
-
-                <li class="project">
-                    <div class="project-meta">
-                        <span class="project-year">2025</span>
-                        <span class="project-kind">Desktop &middot; Tauri</span>
-                    </div>
-                    <div class="project-body">
-                        <h3 class="project-title">LuminaDL</h3>
-                        <p class="project-text">
-                            A desktop video downloader built with Tauri. A small Rust core does
-                            the actual work while a React front-end stays deliberately quiet.
-                            It lives in the system tray, so it&rsquo;s there when I need it and
-                            invisible when I don&rsquo;t. This one taught me most of the Rust I know.
-                        </p>
-                        <ul class="stack">
-                            <li>Tauri 2</li>
-                            <li>Rust</li>
-                            <li>React 19</li>
-                            <li>TypeScript</li>
-                            <li>Tailwind</li>
-                        </ul>
-                        <p class="project-links">
-                            <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">Source &rarr;</a>
-                        </p>
-                    </div>
-                </li>
-
-                <li class="project">
-                    <div class="project-meta">
-                        <span class="project-year">2025</span>
-                        <span class="project-kind">Browser extension</span>
-                    </div>
-                    <div class="project-body">
-                        <h3 class="project-title">Video Extension</h3>
-                        <p class="project-text">
-                            A browser extension I wrote because the built-in volume cap
-                            wasn&rsquo;t enough for quiet embeds, especially iframes like
-                            ok.ru. It boosts per-tab audio beyond 100&nbsp;%, remembers the
-                            level across page loads, and adds keyboard shortcuts
-                            (Z&hairsp;/&hairsp;X) to rewind or skip forward 10 seconds
-                            without touching the mouse. Small popup, two tabs, nothing more.
-                        </p>
-                        <ul class="stack">
-                            <li>JavaScript</li>
-                            <li>HTML</li>
-                            <li>Web Extensions API</li>
-                        </ul>
-                        <p class="project-links">
-                            <a href="https://github.com/FrengkyS1/Video_Extension" target="_blank" rel="noopener">Source &rarr;</a>
-                        </p>
-                    </div>
-                </li>
-
-                <li class="project">
-                    <div class="project-meta">
-                        <span class="project-year">2026</span>
-                        <span class="project-kind">Desktop &middot; Tauri</span>
-                    </div>
-                    <div class="project-body">
-                        <h3 class="project-title">Hearth</h3>
-                        <p class="project-text">
-                            A control panel for setting up a Windows desktop the way I like it:
-                            installing the tools (a tiling window manager, status bar, patched
-                            fonts), writing their config files, and toggling services and
-                            startup items, all from one window instead of a dozen manual steps.
-                            A Rust backend does the privileged work while the front-end stays
-                            plain JavaScript, no framework. I built it because I was tired of
-                            redoing the same ritual on every fresh install.
-                        </p>
-                        <ul class="stack">
-                            <li>Tauri 2</li>
-                            <li>Rust</li>
-                            <li>JavaScript</li>
-                            <li>CSS</li>
-                        </ul>
-                        <p class="project-links">
-                            <a href="https://github.com/FrengkyS1/hearth" target="_blank" rel="noopener">Source &rarr;</a>
-                        </p>
-                    </div>
-                </li>
-            </ol>
-
-            <p class="aside">
-                A few other things, like a manga downloader and a supply-chain sim
-                game for a course, live on my
-                <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">GitHub</a>.
-                These four are the ones I still open every week.
-            </p>
-        </section>
-
-        <!-- About -->
-        <section id="about" class="section about">
-            <h2>About</h2>
-            <div class="prose">
-                <p>
-                    I&rsquo;m a computer-science student based in Indonesia. I tend to
-                    build for myself first: if a tool annoys me, I&rsquo;d rather spend
-                    a weekend rewriting it than keep complaining about it.
+        <main class="content">
+            <!-- Intro -->
+            <section class="intro">
+                <h1 class="lede">
+                    I&rsquo;m Frengky. I build small <em>native</em> desktop apps:
+                    the media tools I wished already existed, then keep using
+                    them myself.
+                </h1>
+                <p class="standfirst">
+                    I&rsquo;m a computer-science student in Indonesia. Most of what I know
+                    I picked up by breaking things and reading other people&rsquo;s source
+                    code. I care about apps that start fast, stay out of the way, and
+                    don&rsquo;t ship a browser inside them.
                 </p>
-                <p>
-                    Lately that means a lot of native desktop work. C++ when I want to
-                    be close to the metal, Rust and Tauri when I want it to ship without
-                    a 200&nbsp;MB runtime. I&rsquo;m comfortable on the web too (React,
-                    TypeScript, a bit of Python on the backend), but the things
-                    I&rsquo;m proudest of run on the desktop.
+                <p class="currently">
+                    <span class="currently-key">Currently</span>
+                    learning Rust properly and rewriting my old C++ player one module
+                    at a time.
                 </p>
-                <p>
-                    I&rsquo;m not done learning any of it. If you&rsquo;ve read this far,
-                    you probably get the appeal of building the unglamorous thing properly.
+            </section>
+
+            <!-- Work -->
+            <section id="work" class="section work">
+                <h2>Selected work</h2>
+
+                <ol class="projects">
+                    <li class="project">
+                        <div class="project-meta">
+                            <span class="project-year">2025</span>
+                            <span class="project-kind">Desktop &middot; native</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">LuminaPlayer</h3>
+                            <p class="project-text">
+                                A video player I wrote in C++ on top of libmpv, because I
+                                wanted something light that just plays my files without the
+                                bloat. It has its own library view, a thin rendering layer
+                                over the mpv engine, and keeps its settings in plain JSON.
+                                No Electron, no web view, no telemetry.
+                            </p>
+                            <ul class="stack">
+                                <li>C++20</li>
+                                <li>libmpv</li>
+                                <li>CMake</li>
+                                <li>Win32</li>
+                            </ul>
+                            <p class="project-links">
+                                <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">Source &rarr;</a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="project">
+                        <div class="project-meta">
+                            <span class="project-year">2025</span>
+                            <span class="project-kind">Desktop &middot; Tauri</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">LuminaDL</h3>
+                            <p class="project-text">
+                                A desktop video downloader built with Tauri. A small Rust core does
+                                the actual work while a React front-end stays deliberately quiet.
+                                It lives in the system tray, so it&rsquo;s there when I need it and
+                                invisible when I don&rsquo;t. This one taught me most of the Rust I know.
+                            </p>
+                            <ul class="stack">
+                                <li>Tauri 2</li>
+                                <li>Rust</li>
+                                <li>React 19</li>
+                                <li>TypeScript</li>
+                                <li>Tailwind</li>
+                            </ul>
+                            <p class="project-links">
+                                <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">Source &rarr;</a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="project">
+                        <div class="project-meta">
+                            <span class="project-year">2025</span>
+                            <span class="project-kind">Browser extension</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Video Extension</h3>
+                            <p class="project-text">
+                                A browser extension I wrote because the built-in volume cap
+                                wasn&rsquo;t enough for quiet embeds, especially iframes like
+                                ok.ru. It boosts per-tab audio beyond 100&nbsp;%, remembers the
+                                level across page loads, and adds keyboard shortcuts
+                                (Z&hairsp;/&hairsp;X) to rewind or skip forward 10 seconds
+                                without touching the mouse. Small popup, two tabs, nothing more.
+                            </p>
+                            <ul class="stack">
+                                <li>JavaScript</li>
+                                <li>HTML</li>
+                                <li>Web Extensions API</li>
+                            </ul>
+                            <p class="project-links">
+                                <a href="https://github.com/FrengkyS1/Video_Extension" target="_blank" rel="noopener">Source &rarr;</a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="project">
+                        <div class="project-meta">
+                            <span class="project-year">2026</span>
+                            <span class="project-kind">Desktop &middot; Tauri</span>
+                        </div>
+                        <div class="project-body">
+                            <h3 class="project-title">Hearth</h3>
+                            <p class="project-text">
+                                A control panel for setting up a Windows desktop the way I like it:
+                                installing the tools (a tiling window manager, status bar, patched
+                                fonts), writing their config files, and toggling services and
+                                startup items, all from one window instead of a dozen manual steps.
+                                A Rust backend does the privileged work while the front-end stays
+                                plain JavaScript, no framework. I built it because I was tired of
+                                redoing the same ritual on every fresh install.
+                            </p>
+                            <ul class="stack">
+                                <li>Tauri 2</li>
+                                <li>Rust</li>
+                                <li>JavaScript</li>
+                                <li>CSS</li>
+                            </ul>
+                            <p class="project-links">
+                                <a href="https://github.com/FrengkyS1/hearth" target="_blank" rel="noopener">Source &rarr;</a>
+                            </p>
+                        </div>
+                    </li>
+                </ol>
+
+                <p class="aside">
+                    A few other things, like a manga downloader and a supply-chain sim
+                    game for a course, live on my
+                    <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">GitHub</a>.
+                    These four are the ones I still open every week.
                 </p>
-            </div>
-        </section>
+            </section>
 
-        <!-- Contact -->
-        <section id="contact" class="section contact">
-            <h2>Get in touch</h2>
-            <p class="contact-lede">
-                Open to internships, freelance, or just trading notes about
-                native apps and media tooling.
-            </p>
-            <ul class="contact-list">
-                <li>
-                    <span class="contact-label">Email</span>
-                    <a href="mailto:frengky.setiawan78@gmail.com">frengky.setiawan78@gmail.com</a>
-                </li>
-                <li>
-                    <span class="contact-label">GitHub</span>
-                    <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">github.com/FrengkyS1</a>
-                </li>
-                <li>
-                    <span class="contact-label">LinkedIn</span>
-                    <a href="https://linkedin.com/in/frengky-setiawan" target="_blank" rel="noopener">in/frengky-setiawan</a>
-                </li>
-            </ul>
-        </section>
-    </main>
+            <!-- About -->
+            <section id="about" class="section about">
+                <h2>About</h2>
+                <div class="prose">
+                    <p>
+                        I&rsquo;m a computer-science student based in Indonesia. I tend to
+                        build for myself first: if a tool annoys me, I&rsquo;d rather spend
+                        a weekend rewriting it than keep complaining about it.
+                    </p>
+                    <p>
+                        Lately that means a lot of native desktop work. C++ when I want to
+                        be close to the metal, Rust and Tauri when I want it to ship without
+                        a 200&nbsp;MB runtime. I&rsquo;m comfortable on the web too (React,
+                        TypeScript, a bit of Python on the backend), but the things
+                        I&rsquo;m proudest of run on the desktop.
+                    </p>
+                    <p>
+                        I&rsquo;m not done learning any of it. If you&rsquo;ve read this far,
+                        you probably get the appeal of building the unglamorous thing properly.
+                    </p>
+                </div>
+            </section>
 
-    <footer class="footer">
-        <p>Hand-written in HTML, CSS &amp; a little JavaScript.</p>
-        <p class="footer-meta">&copy; 2026 Frengky Setiawan &middot; Jakarta</p>
-    </footer>
+            <!-- Contact -->
+            <section id="contact" class="section contact">
+                <h2>Get in touch</h2>
+                <p class="contact-lede">
+                    Open to internships, freelance, or just trading notes about
+                    native apps and media tooling.
+                </p>
+                <ul class="contact-list">
+                    <li>
+                        <span class="contact-label">Email</span>
+                        <a href="mailto:frengky.setiawan78@gmail.com">frengky.setiawan78@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/FrengkyS1" target="_blank" rel="noopener">github.com/FrengkyS1</a>
+                    </li>
+                    <li>
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://linkedin.com/in/frengky-setiawan" target="_blank" rel="noopener">in/frengky-setiawan</a>
+                    </li>
+                </ul>
+            </section>
+
+            <footer class="footer">
+                <p>Hand-written in HTML, CSS &amp; a little JavaScript.</p>
+                <p class="footer-meta">&copy; 2026 Frengky Setiawan &middot; Jakarta</p>
+            </footer>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
